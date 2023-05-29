@@ -39,7 +39,7 @@ $(document).on("click", ".btnactualizarproducto", function(){
 								${value.descripcion}</option>`
 							);
 				})
-				$("#cboestado").val(idpallet);
+				$("#cbopallet").val(idpallet);
 			}			
 		}
 	})
@@ -86,7 +86,7 @@ $(document).on("click", "#btneliminar", function(){
 			ListarProducto();
 		}
 	})
-	$("#modalEliminarSala").modal("hide");
+	$("#modalEliminarProducto").modal("hide");
 })
 
 function ListarProducto(){
