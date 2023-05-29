@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import cibertec.edu.pe.Inventariogrupo06.model.bd.ConteoModel;
+import cibertec.edu.pe.Inventariogrupo06.repository.ConteoRepository;
 import cibertec.edu.pe.Inventariogrupo06.service.ConteoService;
 
 @Controller
@@ -16,11 +17,11 @@ import cibertec.edu.pe.Inventariogrupo06.service.ConteoService;
 public class ConteoController {
 
 	@Autowired
-	private ConteoService conteoService;
+	private ConteoRepository  conteoRepository;
 	
 	@GetMapping("/listarConteos")
 	@ResponseBody
 	public List<ConteoModel> listarConteos(){
-		return conteoService.listarConteo();
+		return conteoRepository.findAll();
 	}
 }
